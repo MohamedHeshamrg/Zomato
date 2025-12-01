@@ -4,8 +4,6 @@ import pandas as pd
 import numpy as np
 import sys
 
-# Fix path
-sys.path.append(r"H:\ML Intern\zomato\app")
 
 pipeline = joblib.load('pages/success_model.pkl')
 
@@ -81,6 +79,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
