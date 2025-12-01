@@ -7,12 +7,29 @@ import sys
 # Fix path
 sys.path.append(r"H:\ML Intern\zomato\app")
 
-# Load model & data
-pipeline = joblib.load("https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/models/success_model.pkl")
-location_List = joblib.load("https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment/location_List.h5")
-type_list = joblib.load('https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment/type_list.h5')
-cost_list = joblib.load('https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment/cost_list.h5')
-inputs = joblib.load("https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment/input.h5")
+url_pipeline = "https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/models/success_model.pkl"
+
+with urllib.request.urlopen(url_pipeline) as f:
+    pipeline = joblib.load(io.BytesIO(f.read()))
+    
+url_location = "https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment/location_List.h5"
+with urllib.request.urlopen(url_location) as f:
+    location_List = joblib.load(io.BytesIO(f.read()))
+
+# ===== Load type_list =====
+url_type = "https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment/type_list.h5"
+with urllib.request.urlopen(url_type) as f:
+    type_list = joblib.load(io.BytesIO(f.read()))
+
+# ===== Load cost_list =====
+url_cost = "https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment/cost_list.h5"
+with urllib.request.urlopen(url_cost) as f:
+    cost_list = joblib.load(io.BytesIO(f.read()))
+
+# ===== Load inputs =====
+url_inputs = "https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment/input.h5"
+with urllib.request.urlopen(url_inputs) as f:
+    inputs = joblib.load(io.BytesIO(f.read()))
 
 
 def predict(online_order, book_table, phone, location, approx_cost, menu_item, type_rest, cost_category):
@@ -66,6 +83,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
