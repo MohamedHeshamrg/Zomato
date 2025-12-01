@@ -50,7 +50,7 @@ theme_plotly = None # None or streamlit
 
  
 # تطبيق التنسيق من CSS خارجي
-with open(r'H:\ML Intern\zomato\app\Deployment\Style.css') as f:
+with open(r'app\Deployment\Style.css') as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.markdown("##")
@@ -58,7 +58,7 @@ st.markdown("##")
 # Reading parts
 @st.cache_data
 def load_data():
-    df = pd.read_parquet(r"H:\ML Intern\zomato\data\preprocessed\data.parquet")
+    df = pd.read_parquet(r"data\preprocessed\data.parquet")
     return df
 df = load_data()
 df['success_cat'] = df["success"].map({1: "Success", 0: "Fail"})
@@ -230,3 +230,4 @@ text-align: center;
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
+
