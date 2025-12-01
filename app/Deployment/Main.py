@@ -239,10 +239,11 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p>Developed by Eng. Mohamed Hesham Ragab<a style='display: block; text-align: center;target="_blank"></a></p>
+<p>Developed with  ❤ by Eng. Mohamed Hesham Ragab<a style='display: block; text-align: center;target="_blank"></a></p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
+
 
 
 
