@@ -49,16 +49,29 @@ def heading():
 theme_plotly = None # None or streamlit
 
  
-# تطبيق التنسيق من CSS خارجي
-with open(r'app\Deployment\Style.css') as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+st.markdown("""
+    <style>
+    [data-testid=metric-container] {
+        box-shadow: 0 0 4px #cccccc;
+        padding: 10px;
+    }
 
-st.markdown("##")
+    .plot-container > div {
+        box-shadow: 0 0 4px #cccccc;
+        padding: 10px;
+    }
+
+    div[data-testid="stExpander"] div[role="button"] p {
+        font-size: 1.3rem;
+        color: rgb(71, 146, 161);
+    }
+    </style>
+""", unsafe_allow_html=True)
 # Reading parts
 # Reading parts
 @st.cache_data
 def load_data():
-    df = pd.read_parquet(r"data\preprocessed\data.parquet")
+    df = pd.read_parquet("https://raw.githubusercontent.com//MohamedHeshamrg/Zomato/data/preprocessed/data.parquet")
     return df
 df = load_data()
 df['success_cat'] = df["success"].map({1: "Success", 0: "Fail"})
@@ -230,4 +243,5 @@ text-align: center;
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
+
 
