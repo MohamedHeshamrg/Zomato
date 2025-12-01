@@ -8,11 +8,11 @@ import sys
 sys.path.append(r"H:\ML Intern\zomato\app")
 
 # Load model & data
-pipeline = joblib.load("https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/models\success_model.pkl")
-location_List = joblib.load("https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment\location_List.h5")
-type_list = joblib.load('https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment\type_list.h5')
-cost_list = joblib.load('https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment\cost_list.h5')
-inputs = joblib.load("https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment\input.h5")
+pipeline = joblib.load("https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/models/success_model.pkl")
+location_List = joblib.load("https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment/location_List.h5")
+type_list = joblib.load('https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment/type_list.h5')
+cost_list = joblib.load('https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment/cost_list.h5')
+inputs = joblib.load("https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment/input.h5")
 
 
 def predict(online_order, book_table, phone, location, approx_cost, menu_item, type_rest, cost_category):
@@ -66,5 +66,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
