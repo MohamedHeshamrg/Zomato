@@ -7,10 +7,8 @@ import sys
 # Fix path
 sys.path.append(r"H:\ML Intern\zomato\app")
 
-url_pipeline = "https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/models/success_model.pkl"
+pipeline = joblib.load('pages/success_model.pkl')
 
-with urllib.request.urlopen(url_pipeline) as f:
-    pipeline = joblib.load(io.BytesIO(f.read()))
     
 url_location = "https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/Deployment/location_List.h5"
 with urllib.request.urlopen(url_location) as f:
@@ -83,6 +81,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
