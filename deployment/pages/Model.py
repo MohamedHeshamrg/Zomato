@@ -5,14 +5,29 @@ import numpy as np
 import sys
 
 # Fix path
-sys.path.append(r"H:\ML Intern\zomato\app")
+rl_pipeline = "https://github.com/MohamedHeshamrg/Zomato/raw/main/models/success_model.pkl"
+with urllib.request.urlopen(url_pipeline) as f:
+    pipeline = joblib.load(io.BytesIO(f.read()))
 
-# Load model & data
-pipeline = joblib.load(r"H:\ML Intern\zomato\models\success_model.pkl")
-location_List = joblib.load(r'H:\ML Intern\zomato\app\location_List.h5')
-type_list = joblib.load(r'H:\ML Intern\zomato\app\type_list.h5')
-cost_list = joblib.load(r'H:\ML Intern\zomato\app\cost_list.h5')
-inputs = joblib.load(r"H:\ML Intern\zomato\app\input.h5")
+# ======= Load location_List =======
+url_location = "https://github.com/MohamedHeshamrg/Zomato/raw/main/app/location_List.h5"
+with urllib.request.urlopen(url_location) as f:
+    location_List = joblib.load(io.BytesIO(f.read()))
+
+# ======= Load type_list =======
+url_type = "https://github.com/MohamedHeshamrg/Zomato/raw/main/app/type_list.h5"
+with urllib.request.urlopen(url_type) as f:
+    type_list = joblib.load(io.BytesIO(f.read()))
+
+# ======= Load cost_list =======
+url_cost = "https://github.com/MohamedHeshamrg/Zomato/raw/main/app/cost_list.h5"
+with urllib.request.urlopen(url_cost) as f:
+    cost_list = joblib.load(io.BytesIO(f.read()))
+
+# ======= Load inputs =======
+url_inputs = "https://github.com/MohamedHeshamrg/Zomato/raw/main/app/input.h5"
+with urllib.request.urlopen(url_inputs) as f:
+    inputs = joblib.load(io.BytesIO(f.read()))
 
 def predict(online_order, book_table, phone, location, approx_cost, menu_item, type_rest, cost_category):
 
@@ -65,3 +80,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
