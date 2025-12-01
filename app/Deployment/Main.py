@@ -71,7 +71,7 @@ st.markdown("""
 # Reading parts
 @st.cache_data
 def load_data():
-    df = pd.read_parquet("https://raw.githubusercontent.com//MohamedHeshamrg/Zomato/data/preprocessed/data.parquet")
+    df = pd.read_parquet("https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/data/preprocessed/data.parquet")
     return df
 df = load_data()
 df['success_cat'] = df["success"].map({1: "Success", 0: "Fail"})
@@ -243,5 +243,6 @@ text-align: center;
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
+
 
 
