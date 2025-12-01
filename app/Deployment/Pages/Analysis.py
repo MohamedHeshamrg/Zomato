@@ -32,17 +32,35 @@ def heading():
         </style>
 
         <div class="custom-heading">
-            📈 Explatory Data Analysis 📊
+            📈 Descriptive Analytics 📊
         </div>
     """, unsafe_allow_html=True)
 
-heading()
 
-# تطبيق التنسيق من CSS خارجي
-with open(r'H:\ML Intern\zomato\app\Deployment\Style.css') as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.markdown("##")
+
+#remove default theme
+theme_plotly = None # None or streamlit
+
+ 
+st.markdown("""
+    <style>
+    [data-testid=metric-container] {
+        box-shadow: 0 0 4px #cccccc;
+        padding: 10px;
+    }
+
+    .plot-container > div {
+        box-shadow: 0 0 4px #cccccc;
+        padding: 10px;
+    }
+
+    div[data-testid="stExpander"] div[role="button"] p {
+        font-size: 1.3rem;
+        color: rgb(71, 146, 161);
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 tab1, tab2  = st.tabs(['📊🟦 Categorical Analysis','📈🟧 Numerical Analysi'])
 
@@ -51,7 +69,7 @@ tab1, tab2  = st.tabs(['📊🟦 Categorical Analysis','📈🟧 Numerical Analy
 # Reading parts
 @st.cache_data
 def load_data():
-    df = pd.read_parquet(r"H:\ML Intern\zomato\data\preprocessed\data.parquet")
+    df = pd.read_parquet(r"https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/data/preprocessed/data.parquet")
     return df
 df = load_data()
 df['success_cat'] = df["success"].map({1: "Success", 0: "Fail"})
@@ -674,6 +692,7 @@ with tab2:
 
     st.write("📌 **Statistics For Numerical Feature**")
     st.dataframe(df.describe().T)
+
 
 
 
