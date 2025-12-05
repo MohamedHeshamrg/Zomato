@@ -4,15 +4,13 @@ import pandas as pd
 import numpy as np
 import sys
 
-# Fix path
-sys.path.append(r"H:\ML Intern\zomato\app")
 
 # Load model & data
-pipeline = joblib.load(r"H:\ML Intern\zomato\models\success_model.pkl")
-location_List = joblib.load(r'H:\ML Intern\zomato\app\location_List.h5')
-type_list = joblib.load(r'H:\ML Intern\zomato\app\type_list.h5')
-cost_list = joblib.load(r'H:\ML Intern\zomato\app\cost_list.h5')
-inputs = joblib.load(r"H:\ML Intern\zomato\app\input.h5")
+pipeline = joblib.load(r"models\success_model.joblib")
+location_List = joblib.load('location_List.h5')
+type_list = joblib.load('type_list.h5')
+cost_list = joblib.load('cost_list.h5')
+inputs = joblib.load("input.h5")
 
 def predict(online_order, book_table, phone, location, approx_cost, menu_item, type_rest, cost_category):
 
@@ -65,3 +63,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
