@@ -74,11 +74,8 @@ def load_data():
     df = pd.read_parquet("https://raw.githubusercontent.com/MohamedHeshamrg/Zomato/main/data/preprocessed/data.parquet")
     return df
 df = load_data()
-df['success_cat'] = df["success"].map({1: "Success", 0: "Fail"})
-df['menu_item'] = df["menu_item"].map({1: "Have menu", 0: "Doesn't have menu"})
-df['phone'] =  df['phone'].map({1: "Have one phone", 2: "Have two phone"})
-df['online_order'] = df['online_order'].map({1: "Yes", 0: "No"})
-df['book_table'] = df['book_table'].map({1: "Yes", 0: "No"})
+df['success_cat'] = df["success_score"].map({1: "Success", 0: "Fail"})
+
 
 
 
@@ -243,6 +240,7 @@ text-align: center;
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
+
 
 
 
