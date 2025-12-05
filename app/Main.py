@@ -20,13 +20,13 @@ import sys
 
 st.set_page_config(page_title="Descriptive Analytics ", page_icon="🌎", layout="wide")  
 
-# Custom heading with dark blue background and white text
+# Custom heading with beige background and dark text
 def heading():
     st.markdown("""  
         <style>
         .custom-heading {
-            background-color: #5ab8db;  /* لبني غامق */
-            color: white;              /* خط أبيض */
+            background-color: #F5F5DC;  /* اللون البيج */
+            color: #333333;             /* خط غامق عشان يبان */
             padding: 20px;
             border-radius: 12px;
             font-size: 36px;
@@ -41,6 +41,7 @@ def heading():
             📈 Descriptive Analytics 📊
         </div>
     """, unsafe_allow_html=True)
+
 
 
 
@@ -240,6 +241,7 @@ text-align: center;
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
+
 
 
 
