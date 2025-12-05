@@ -7,10 +7,10 @@ import sys
 
 # Load model & data
 pipeline = joblib.load("app/pages/success_model.joblib")
-location_List = joblib.load('location_List.h5')
-type_list = joblib.load('type_list.h5')
-cost_list = joblib.load('cost_list.h5')
-inputs = joblib.load("input.h5")
+location_List = joblib.load('app/pages/location_List.h5')
+type_list = joblib.load('app/pages/type_list.h5')
+cost_list = joblib.load('app/pages/cost_list.h5')
+inputs = joblib.load("app/pages/input.h5")
 
 def predict(online_order, book_table, phone, location, approx_cost, menu_item, type_rest, cost_category):
 
@@ -63,6 +63,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
