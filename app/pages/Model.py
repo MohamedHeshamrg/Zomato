@@ -35,18 +35,16 @@ def main():
     approx_cost = st.number_input('approx_cost(for two people)', min_value=40, max_value=6000, value=1500)
 
     online_order = st.selectbox('Online order available?', ['Yes', 'No'])
-    online_order = 1 if online_order.lower() == "yes" else 0
 
     book_table = st.selectbox('Book table available?', ['Yes', 'No'])
-    book_table = 1 if book_table.lower() == "yes" else 0
 
     phone = st.selectbox('How many phone lines?', ['One', 'Two'])
-    phone = 1 if phone.lower() == "one" else 2
+    phone = "Have one phone" if phone.lower() == "one" else "Have two phone"
 
     location = st.selectbox('Location', sorted(location_List))
 
     menu_item = st.selectbox('Is there a menu?', ['Yes', 'No'])
-    menu_item = 1 if menu_item.lower() == "yes" else 0
+    menu_item = "Have menu" if menu_item.lower() == "yes" else "Doesn't have menu"
 
     type_rest = st.selectbox('Restaurant Type', sorted(type_list))
     cost_category = st.selectbox('Cost Category', sorted(cost_list))
@@ -63,6 +61,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
