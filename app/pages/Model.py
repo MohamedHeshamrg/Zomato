@@ -6,7 +6,7 @@ import sys
 
 
 # Load model & data
-pipeline = joblib.load("pages/success_model.joblib")
+pipeline = joblib.load("app/pages/success_model.joblib")
 location_List = joblib.load('location_List.h5')
 type_list = joblib.load('type_list.h5')
 cost_list = joblib.load('cost_list.h5')
@@ -63,5 +63,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
