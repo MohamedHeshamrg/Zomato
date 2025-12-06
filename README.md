@@ -1,4 +1,5 @@
 # 🍽️ Zomato Restaurant Analysis & Success Prediction  
+<p align="center"> <img src="https://unsplash.com/s/photos/zomato" width="750"> </p>
 ### 🧠 Streamlit Dashboard + Machine Learning Model  
 
 This project provides an end-to-end analytical and predictive system for restaurant data.  
@@ -36,5 +37,4 @@ The project includes a complete ML training pipeline:
 
 ---
 
-## 🗂️ Project Structure
 
