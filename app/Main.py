@@ -52,23 +52,20 @@ theme_plotly = None # None or streamlit
  
 st.markdown("""
     <style>
-    [data-testid=metric-container] {
-        box-shadow: 0 0 4px #cccccc;
-        padding: 10px;
+    /* Change st.info background to beige */
+    div.stAlert {
+        background-color: #F5DEB3 !important;   /* Beige */
+        border-left: 6px solid #C5A880 !important; /* Dark beige border */
     }
 
-    .plot-container > div {
-        box-shadow: 0 0 4px #cccccc;
-        padding: 10px;
-    }
-
-    div[data-testid="stExpander"] div[role="button"] p {
-        font-size: 1.3rem;
-        color: #C5A880;   /* Beige-Dark */
-;
+    /* Change text color inside st.info */
+    div.stAlert p {
+        color: #4a3f35 !important;  /* Dark brown text */
+        font-weight: bold;
     }
     </style>
 """, unsafe_allow_html=True)
+
 # Reading parts
 # Reading parts
 @st.cache_data
@@ -242,6 +239,7 @@ text-align: center;
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
+
 
 
 
