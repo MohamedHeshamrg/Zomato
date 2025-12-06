@@ -87,7 +87,7 @@ st.sidebar.header("📊 Analysis")
 # 🟦 Categorical
 # ------------------------------
 with tab1:
-    st.markdown('<h3 style="text-align: center; color : #5ab8db;">Charts of Categorical features</h3>', unsafe_allow_html=True)
+    st.markdown('<h3 style="text-align: center; color : #F5DEB3;">Charts of Categorical features</h3>', unsafe_allow_html=True)
     sts = st.selectbox('select How featureImpact on :',
                        ['Rate', 'Approxx cost',"count"], key=21)
     if sts == 'count':
@@ -148,7 +148,7 @@ with tab1:
             
             
         with st.container():
-            st.markdown('<h3 style="text-align: center; color : #5ab8db;">Charts of restorant Attributes features</h3>', unsafe_allow_html=True)
+            st.markdown('<h3 style="text-align: center; color : #F5DEB3;">Charts of restorant Attributes features</h3>', unsafe_allow_html=True)
             
             col= st.selectbox('select restorant Attributes feature 👀 to see its distribution : ',
                       ['Restaurant Type','Cuisine Type', 'listed_in(type)'], key=23)
@@ -201,7 +201,7 @@ with tab1:
 
 
         with st.container():
-            st.markdown('<h3 style="text-align: center; color : #5ab8db;">Charts of Location features</h3>', unsafe_allow_html=True)
+            st.markdown('<h3 style="text-align: center; color : #F5DEB3;">Charts of Location features</h3>', unsafe_allow_html=True)
             
             col= st.selectbox('select Location feature 🚩 to see its distribution : ',
                       ['location','listed_in(city)'], key=25)
@@ -243,7 +243,7 @@ with tab1:
 
     elif sts == 'Rate':
         with st.container():
-            st.markdown('<h3 style="text-align: center; color : #5ab8db;">Charts of restorant identity features</h3>', unsafe_allow_html=True)
+            st.markdown('<h3 style="text-align: center; color : #F5DEB3;">Charts of restorant identity features</h3>', unsafe_allow_html=True)
 
             col= st.selectbox('select restorant identity feature to see its distribution : ',
                       ['online_order','book_table','phone','menu_item',"success_cat","cost_category"], key=20)
@@ -278,7 +278,7 @@ with tab1:
 
 
         with st.container():
-            st.markdown('<h3 style="text-align: center; color : #5ab8db;">Charts of restorant Attributes features</h3>', unsafe_allow_html=True)
+            st.markdown('<h3 style="text-align: center; color : #F5DEB3;">Charts of restorant Attributes features</h3>', unsafe_allow_html=True)
             
             col= st.selectbox('select restorant Attributes feature 👀 to see its distribution : ',
                       ['Restaurant Type','Cuisine Type', 'listed_in(type)'], key=23)
@@ -356,7 +356,7 @@ with tab1:
 
 
         with st.container():
-            st.markdown('<h3 style="text-align: center; color : #5ab8db;">Charts of Location features</h3>', unsafe_allow_html=True)
+            st.markdown('<h3 style="text-align: center; color : #F5DEB3;">Charts of Location features</h3>', unsafe_allow_html=True)
             
             col= st.selectbox('select Location feature 🚩 to see its distribution : ',
                       ['location','listed_in(city)'], key=25)
@@ -405,7 +405,7 @@ with tab1:
     elif sts == 'Approxx cost':
     
         with st.container():
-            st.markdown('<h3 style="text-align: center; color : #5ab8db;">Charts of restorant identity features</h3>', unsafe_allow_html=True)
+            st.markdown('<h3 style="text-align: center; color : #F5DEB3;">Charts of restorant identity features</h3>', unsafe_allow_html=True)
 
             col= st.selectbox('select restorant identity feature to see its distribution : ',
                       ['online_order','book_table','phone','menu_item',"success_cat","cost_category"], key=50)
@@ -441,7 +441,7 @@ with tab1:
 
 
         with st.container():
-            st.markdown('<h3 style="text-align: center; color : #5ab8db;">Charts of restorant Attributes features</h3>', unsafe_allow_html=True)
+            st.markdown('<h3 style="text-align: center; color : #F5DEB3;">Charts of restorant Attributes features</h3>', unsafe_allow_html=True)
             
             col= st.selectbox('select restorant Attributes feature 👀 to see its distribution : ',
                       ['Restaurant Type','Cuisine Type', 'listed_in(type)'], key=55)
@@ -518,7 +518,7 @@ with tab1:
 
 
         with st.container():
-            st.markdown('<h3 style="text-align: center; color : #5ab8db;">Charts of Location features</h3>', unsafe_allow_html=True)
+            st.markdown('<h3 style="text-align: center; color : #F5DEB3;">Charts of Location features</h3>', unsafe_allow_html=True)
             
             col= st.selectbox('select Location feature 🚩 to see its distribution : ',
                       ['location','listed_in(city)'], key=52)
@@ -614,13 +614,13 @@ with tab1:
 # ------------------------------
 with tab2:
     st.markdown(
-        '<h3 style="text-align: center; color : #5ab8db;">📊 Charts of Numerical Features</h3>',
+        '<h3 style="text-align: center; color : #F5DEB3;">📊 Charts of Numerical Features</h3>',
         unsafe_allow_html=True
     )
 
     with st.container():
         st.markdown(
-            '<h4 style="text-align: center; color : #5ab8db;">📈 Distribution of Numerical Features</h4>',
+            '<h4 style="text-align: center; color : #F5DEB3;">📈 Distribution of Numerical Features</h4>',
             unsafe_allow_html=True
         )
 
@@ -689,6 +689,7 @@ with tab2:
 
     st.write("📌 **Statistics For Numerical Feature**")
     st.dataframe(df.describe().T)
+
 
 
 
