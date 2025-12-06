@@ -233,16 +233,17 @@ left: 0;
 height:5%;
 bottom: 0;
 width: 100%;
-background-color: #243946;
-color: white;
+background-color: #F5DEB3;
+color: #333333;
 text-align: center;
 }
 </style>
 <div class="footer">
-<p>Developed with  ❤ by Eng. Mohamed Hesham Ragab<a style='display: block; text-align: center;target="_blank"></a></p>
+<p>Developed by  Mohamed Hesham Ragab<a style='display: block; text-align: center;target="_blank"></a></p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
+
 
 
 
