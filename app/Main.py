@@ -218,31 +218,39 @@ Graphs()
      
   
 
-footer="""<style>
- 
-
-a:hover,  a:active {
-color: red;
-background-color: transparent;
-text-decoration: underline;
+footer = """
+<style>
+a {
+    color: #333333;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
 }
 
 .footer {
-position: fixed;
-left: 0;
-height:5%;
-bottom: 0;
-width: 100%;
-background-color: #F5DEB3;
-color: #333333;
-text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #F5DEB3;  /* Beige */
+    color: #333333;             /* Dark text */
+    text-align: center;
+    padding: 8px 0;
+    font-weight: bold;
+    font-size: 16px;
 }
 </style>
+
 <div class="footer">
-<p>Developed by  Mohamed Hesham Ragab<a style='display: block; text-align: center;target="_blank"></a></p>
+    Developed by Mohamed Hesham Ragab
 </div>
 """
-st.markdown(footer,unsafe_allow_html=True)
+
+st.markdown(footer, unsafe_allow_html=True)
+
+
 
 
 
