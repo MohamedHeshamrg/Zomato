@@ -64,7 +64,8 @@ st.markdown("""
 
     div[data-testid="stExpander"] div[role="button"] p {
         font-size: 1.3rem;
-        color: rgb(71, 146, 161);
+        color: #C5A880;   /* Beige-Dark */
+;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -241,6 +242,7 @@ text-align: center;
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
+
 
 
 
