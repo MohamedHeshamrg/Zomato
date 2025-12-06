@@ -56,6 +56,9 @@ st.markdown("""
     div.stAlert {
         background-color: #F5DEB3 !important;   /* Beige */
         border-left: 6px solid #C5A880 !important; /* Dark beige border */
+    }.plot-container > div {
+    box-shadow: 0 0 4px #cccccc;
+    padding: 10px;
     }
 
     /* Change text color inside st.info */
@@ -63,6 +66,7 @@ st.markdown("""
         color: #4a3f35 !important;  /* Dark brown text */
         font-weight: bold;
     }
+    
     </style>
 """, unsafe_allow_html=True)
 
@@ -239,6 +243,7 @@ text-align: center;
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
+
 
 
 
