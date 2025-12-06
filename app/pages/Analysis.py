@@ -19,8 +19,8 @@ def heading():
     st.markdown("""  
         <style>
         .custom-heading {
-            background-color: #5ab8db;  /* لبني غامق */
-            color: white;              /* خط أبيض */
+            background-color: #F5F5DC;  /* اللون البيج */
+            color: #333333;             /* خط غامق عشان يبان */
             padding: 20px;
             border-radius: 12px;
             font-size: 36px;
@@ -45,20 +45,21 @@ theme_plotly = None # None or streamlit
  
 st.markdown("""
     <style>
-    [data-testid=metric-container] {
-        box-shadow: 0 0 4px #cccccc;
-        padding: 10px;
+    /* Change st.info background to beige */
+    div.stAlert {
+        background-color: #F5DEB3 !important;   /* Beige */
+        border-left: 6px solid #C5A880 !important; /* Dark beige border */
+    }.plot-container > div {
+    box-shadow: 0 0 4px #cccccc;
+    padding: 10px;
     }
 
-    .plot-container > div {
-        box-shadow: 0 0 4px #cccccc;
-        padding: 10px;
+    /* Change text color inside st.info */
+    div.stAlert p {
+        color: #4a3f35 !important;  /* Dark brown text */
+        font-weight: bold;
     }
-
-    div[data-testid="stExpander"] div[role="button"] p {
-        font-size: 1.3rem;
-        color: rgb(71, 146, 161);
-    }
+    
     </style>
 """, unsafe_allow_html=True)
 
@@ -689,6 +690,7 @@ with tab2:
 
     st.write("📌 **Statistics For Numerical Feature**")
     st.dataframe(df.describe().T)
+
 
 
 
